@@ -1,0 +1,35 @@
+_repo: The-South-Pole-an-account-of-the-Norwegian-antarctic-expedition-in-the-Fram-1910-1912-Volume-2_3415
+contributor:
+  translator:
+    agent_name: Chater, Arthur G.
+    alias: Chater, A. G. (Arthur G.)
+    gutenberg_agent_id: '1190'
+    url: http://www.gutenberg.org/2009/agents/1190
+creator:
+  author:
+    agent_name: Amundsen, Roald
+    aliases:
+    - Amundsen, Rual
+    - Amundsen, Roald Engelbregt Gravning
+    birthdate: 1872
+    deathdate: 1928
+    gutenberg_agent_id: '1189'
+    url: http://www.gutenberg.org/2009/agents/1189
+    wikipedia: http://en.wikipedia.org/wiki/Roald_Amundsen
+description: Translation of Sydpolen.
+gutenberg_issued: '2002-09-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '3415'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Antarctica -- Discovery and exploration -- Norwegian'
+- !lcsh 'South Pole -- Discovery and exploration -- Norwegian'
+- !lcc 'G'
+- !lcsh 'Amundsen, Roald, 1872-1928 -- Travel -- Antarctica'
+title: The South Pole; an account of the Norwegian antarctic expedition in the "Fram,"
+  1910-1912 — Volume 2
+url: http://www.gutenberg.org/ebooks/3415
