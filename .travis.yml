@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+before_install:
+- gem install asciidoctor -v 1.5.2
+- gem install tilt
+- sudo pip install git+https://github.com/gitenberg-dev/gitberg
+- sudo pip install pillow
+- sudo pip install cssutils
+- sudo pip install docutils
+- sudo pip install roman
+- sudo pip install git+https://github.com/gitenberg-dev/pg-epubmaker
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+
+- /usr/bin/python -c "from gitenberg import travis; travis.build_epub()"
+- ebook-convert book.epub book.mobi
+- xvfb-run ebook-convert book.epub book.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: C6XIrNTvdb4DyE2KFD0n5lCtTzT3ck2umbwYvTW1YYoAL3F3Hv5AgpK5MkEXPrqARJ4eUQgsY70yM8Z2eNM3KCvD8uQ99c8sBWz+fWRJQ/Yoxzu9UTbGffZQdE6/KF8zR3xQtjh7SjuUEXSEBC/MEjB9n9GkcjiDpLs7kIbyPX8ojb8v8k/A0/P6RcXv2I2QwQNNsIPwRfLzMZFSPhb/NRDpLYUVqn288dPf0D+G0hiaS1zalNWZPqWSpe6CX2SLxovPPJhmmX7Mq1BQThC7KXORdRBBJLVIiazDDUKmv/IMaprfygW1qDIabmxmXWBAjMT/aXLx/PMie5VhL3JHriOzFLDDJoVO23/dNC+S+0O1WfjZtK1KJazeHrFFNwwFkVLlFpZwdYyQLGCz5TrLs/kw4ZdH+6nm+U4yFvAPPGSVkrRcFUsup55v/rVDk5wrb2hsDfWA/YFMggVRpIfuzuIYLOuATOJZOgTmySmhwkNmL6Ozzfwp4SCbhfnlJ0JloYoC2nCqg2I6ZEvoQVUuh1B3DlHni1vKz8d2hdwCdPnhYQFgowHYSvr6y49XjmTfi/0A5khA2wOTWB18p7VTIybTTpl5nqyRtMtp/2ZTHSRoay7iDCSOhUubZHTnS98afzoDxHWiPTxplP3zHciml9P7IwsK0Ebjg1ZdytLMVmI=
+  file:
+    - book.epub
+    - book.mobi
+    - book.pdf
+  "on":
+    repo: GITenberg/The-South-Pole-an-account-of-the-Norwegian-antarctic-expedition-in-the-Fram-1910-1912-Volume-2_3415
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
+    - python-pip
+    - git
+    - python-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libfreetype6
+    - libfreetype6-dev
+    - zlib1g-dev
+    - python-lxml
+    - libxml2-dev
+    - libxslt1-dev
+    - tidy
