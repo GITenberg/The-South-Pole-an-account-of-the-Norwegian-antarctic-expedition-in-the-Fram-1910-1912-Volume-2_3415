@@ -1,11 +1,14 @@
 _repo: The-South-Pole-an-account-of-the-Norwegian-antarctic-expedition-in-the-Fram-1910-1912-Volume-2_3415
-_version: 0.1.0
+_version: 0.2.0
 contributor:
   translator:
     agent_name: Chater, Arthur G.
     alias: Chater, A. G. (Arthur G.)
     gutenberg_agent_id: '1190'
     url: http://www.gutenberg.org/2009/agents/1190
+covers:
+- cover_type: generated
+  image_path: cover.png
 creator:
   author:
     agent_name: Amundsen, Roald
@@ -18,6 +21,8 @@ creator:
     url: http://www.gutenberg.org/2009/agents/1189
     wikipedia: http://en.wikipedia.org/wiki/Roald_Amundsen
 description: Translation of Sydpolen.
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/3415#The-South-Pole-an-account-of-the-Norwegian-antarctic-expedition-in-the-Fram-1910-1912-Volume-2
 gutenberg_issued: '2002-09-01'
 gutenberg_type: Text
 identifiers:
