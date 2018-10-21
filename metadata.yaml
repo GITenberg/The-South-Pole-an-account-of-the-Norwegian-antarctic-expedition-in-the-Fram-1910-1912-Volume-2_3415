@@ -1,5 +1,5 @@
 _repo: The-South-Pole-an-account-of-the-Norwegian-antarctic-expedition-in-the-Fram-1910-1912-Volume-2_3415
-_version: 0.2.0
+_version: 0.2.1
 contributor:
   translator:
     agent_name: Chater, Arthur G.
@@ -36,6 +36,7 @@ subjects:
 - !lcsh 'South Pole -- Discovery and exploration -- Norwegian'
 - !lcc 'G'
 - !lcsh 'Amundsen, Roald, 1872-1928 -- Travel -- Antarctica'
+- GITenberg
 title: The South Pole; an account of the Norwegian antarctic expedition in the "Fram,"
   1910-1912 — Volume 2
 url: http://www.gutenberg.org/ebooks/3415
